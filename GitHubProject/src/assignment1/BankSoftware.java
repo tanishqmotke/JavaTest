@@ -16,15 +16,17 @@ public class BankSoftware {
 		if (length == 10) {
 			d.setMobileno(no);
 		} else {
-			System.out.println("Entre 10 Dight Mobile Number");
+			System.out.println("Enter 10 Dight Mobile Number");
 		}
 
-		System.out.println("Entre Bank Details : 1.Bank Name 2.IFSC 3.Acc Number 4.Main Balance");
+		System.out.println("Enter Bank Details : 1.Bank Name 2.IFSC 3.Acc Number 4.Main Balance");
 		d.setBankname(s.nextLine());
 		d.setIfsc(s.nextLine());
 		d.setAccno(s.nextInt());
 		d.setMainbalance(s.nextInt());
 
+		boolean t=true;
+		while(t){
 		System.out.println("1.View Details\n2.withdrawl\n3.Deposite\n4.Exit");
 		int choice = s.nextInt();
 
@@ -55,9 +57,11 @@ public class BankSoftware {
 			int deposite = s.nextInt();
 			System.out.println("Main balance :" + (d.getMainbalance() + deposite));
 			d.setMainbalance(d.getMainbalance() - deposite);
-
+   			break;
 		case 4:
+			t=false;
 			break;
+		}
 		}
 	}
 }	
