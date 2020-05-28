@@ -24,7 +24,8 @@ public class BankSoftware {
 		d.setIfsc(s.nextLine());
 		d.setAccno(s.nextInt());
 		d.setMainbalance(s.nextInt());
-
+  boolean t=true;
+	while(t){
 		System.out.println("1.View Details\n2.withdrawl\n3.Deposite\n4.Exit");
 		int choice = s.nextInt();
 
@@ -55,10 +56,12 @@ public class BankSoftware {
 			int deposite = s.nextInt();
 			System.out.println("Main balance :" + (d.getMainbalance() + deposite));
 			d.setMainbalance(d.getMainbalance() - deposite);
-
+				break;
 		case 4:
+				t=false;
 			break;
 		}
+	}
 	}
 }	
 
