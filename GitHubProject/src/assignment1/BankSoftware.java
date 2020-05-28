@@ -13,10 +13,13 @@ public class BankSoftware {
 		d.setMail(s.nextLine());
 		String no = s.nextLine();
 		int length = String.valueOf(no).length();
+		boolean t=true;
+		while(t){
 		if (length == 10) {
-			d.setMobileno(no);
+			t=false;
 		} else {
 			System.out.println("Entre 10 Dight Mobile Number");
+		}
 		}
 
 		System.out.println("Entre Bank Details : 1.Bank Name 2.IFSC 3.Acc Number 4.Main Balance");
